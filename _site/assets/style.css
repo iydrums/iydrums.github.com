@@ -7,13 +7,14 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", sans-serif;
   font-size: 24px;
   font-weight: 300;
-  line-height: 1.4em;
+l line-height: 1.2em;
   margin: 0;
   padding: 1em;
   text-transform: lowercase;
   min-height: 100%;
   box-sizing: border-box;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   line-height: 1em;
@@ -23,18 +24,17 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1.4em;
+  margin-bottom: 1.2em;
 }
 
 img {
   border: none;
   display: block;
 }
+
 ol {
-  margin: 0;
-  padding: 0;
-  list-style-position: inside;
   list-style-type: lower-roman;
+  margin-top: 0;
 }
 
 html {
@@ -74,6 +74,23 @@ img { display: block; }
   z-index: 0;
 }
 
+
+.audioplayer {
+  margin-bottom: 1em;
+}
+.audioplayer ol {
+  max-width: 12em;
+}
+.sc_song {
+  cursor: pointer;
+  padding: .4em .1em;
+}
+
+
+.is_playing {
+  background: white;
+}
+
 @media screen and (max-width: 585px) {
   #artist_image {
     height: 347px;
@@ -87,21 +104,8 @@ img { display: block; }
   body {
     font-size: 18px;
   }
-}
-
-.audioplayer {
-  margin-bottom: 1em;
-}
-.sc_song {
-  cursor: pointer;
-  padding: .25em;
-  max-width: 12em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.is_playing {
-  background: white;
+  .sc_song {
+    padding: .7em .1em;
+  }
 }
 

@@ -14,17 +14,3 @@
   z-index: 0;
 }
 
-@media screen and (max-width: 585px) {
-  #artist_image {
-    height: 347px;
-    position: relative;
-  }
-  #artist_image img {
-    position: absolute;
-    bottom: -1em;
-    right: -1em;
-  }
-  body {
-    font-size: 18px;
-  }
-}
