@@ -27,6 +27,9 @@ img {
   border: none;
   display: block;
 }
+ol {
+  list-style: lower-roman;
+}
 
 html {
   color: #222;

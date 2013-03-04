@@ -27,3 +27,6 @@ img {
   border: none;
   display: block;
 }
+ol {
+  list-style: lower-roman;
+}

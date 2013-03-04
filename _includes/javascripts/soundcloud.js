@@ -16,7 +16,7 @@ cgf.SongView = Backbone.View.extend({
     this.render()
   },
   render: function(){
-    this.$el.html("<h3>" + this.model.get('title') + "</h3>")
+    this.$el.html(this.model.get('title'))
   },
   events: {
     "click": "onclick"
