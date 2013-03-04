@@ -1,0 +1,22 @@
+#yield, #header {
+  max-width: 12em;
+}
+#artist_image img {
+  width: 480px;
+  height: 347px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 640px) {
+  #artist_image {
+    height: 347px;
+    position: relative;
+  }
+  #artist_image img {
+    position: absolute;
+    bottom: -1em;
+    right: -1em;
+  }
+}

@@ -1,6 +1,7 @@
-body {
-  background-color: #ec8b3a;
+html {
   color: #222;
+  background-color: #ec8b3a;
+  height: 100%;
 }
 
 a {
@@ -11,3 +12,6 @@ a {
 h1, h2, h3, h4 {
   color: white;
 }
+
+img { display: block; }
+

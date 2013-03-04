@@ -1,21 +1,18 @@
 html {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 body {
   font-family: "Gill Sans", "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", sans-serif;
   font-size: 24px;
   font-weight: 300;
   line-height: 1.4em;
-  height: 100%;
   margin: 0;
   padding: 1em;
-  max-width: 12em;
+  text-transform: lowercase;
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  text-transform: uppercase;
   line-height: 1em;
   margin: 0;
   padding: 0;
@@ -29,13 +26,12 @@ p {
 img {
   border: none;
   display: block;
-  float: left;
-  margin-right: 4em;
 }
 
-body {
-  background-color: #ec8b3a;
+html {
   color: #222;
+  background-color: #ec8b3a;
+  height: 100%;
 }
 
 a {
@@ -45,6 +41,32 @@ a {
 
 h1, h2, h3, h4 {
   color: white;
+}
+
+img { display: block; }
+
+
+#yield, #header {
+  max-width: 12em;
+}
+#artist_image img {
+  width: 480px;
+  height: 347px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 640px) {
+  #artist_image {
+    height: 347px;
+    position: relative;
+  }
+  #artist_image img {
+    position: absolute;
+    bottom: -1em;
+    right: -1em;
+  }
 }
 
 .audioplayer {
