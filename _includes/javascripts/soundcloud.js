@@ -22,6 +22,11 @@ cgf.SongView = Backbone.View.extend({
     "click": "onclick"
   },
   onclick: function(e) {
+    this.spinner = new Spinner({
+      radius: 8,
+      color: '#fff',
+      left: '0'
+    }).spin(this.el)
     if(this.model.get('sound')){
       this.toggle()
     } else {
@@ -46,6 +51,7 @@ cgf.SongView = Backbone.View.extend({
   },
   onplay: function(){
     var self = this
+    self.spinner.stop()
     self.$el.addClass("is_playing")
     this.collection.each(function(s){
       snd = s.get('sound')
@@ -53,6 +59,7 @@ cgf.SongView = Backbone.View.extend({
     })
   },
   onpause: function(){
+    this.spinner.stop()
     this.$el.removeClass("is_playing")
   },
   whileplaying: function(){

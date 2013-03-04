@@ -1,6 +1,7 @@
 html {
   margin: 0;
   padding: 0;
+  min-height: 100%;
 }
 body {
   font-family: "Gill Sans", "Gill Sans MT", GillSans, Calibri, "Trebuchet MS", sans-serif;
@@ -10,6 +11,8 @@ body {
   margin: 0;
   padding: 1em;
   text-transform: lowercase;
+  min-height: 100%;
+  box-sizing: border-box;
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
@@ -28,13 +31,19 @@ img {
   display: block;
 }
 ol {
-  list-style: lower-roman;
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  list-style-type: lower-roman;
 }
 
 html {
   color: #222;
   background-color: #ec8b3a;
   height: 100%;
+}
+body {
+  border: .5em solid white;
 }
 
 a {
@@ -50,7 +59,11 @@ img { display: block; }
 
 
 #yield, #header {
-  max-width: 12em;
+  max-width: 20em;
+}
+#yield {
+  position: relative;
+  z-index: 10;
 }
 #artist_image img {
   width: 480px;
@@ -58,9 +71,10 @@ img { display: block; }
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: 0;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 585px) {
   #artist_image {
     height: 347px;
     position: relative;
@@ -70,9 +84,24 @@ img { display: block; }
     bottom: -1em;
     right: -1em;
   }
+  body {
+    font-size: 18px;
+  }
 }
 
 .audioplayer {
   margin-bottom: 1em;
+}
+.sc_song {
+  cursor: pointer;
+  padding: .25em;
+  max-width: 12em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.is_playing {
+  background: white;
 }
 

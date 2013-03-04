@@ -3,6 +3,9 @@ html {
   background-color: #ec8b3a;
   height: 100%;
 }
+body {
+  border: .5em solid white;
+}
 
 a {
   text-decoration: none;

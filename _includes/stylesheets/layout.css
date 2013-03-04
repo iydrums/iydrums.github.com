@@ -1,5 +1,9 @@
 #yield, #header {
-  max-width: 12em;
+  max-width: 20em;
+}
+#yield {
+  position: relative;
+  z-index: 10;
 }
 #artist_image img {
   width: 480px;
@@ -7,9 +11,10 @@
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: 0;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 585px) {
   #artist_image {
     height: 347px;
     position: relative;
@@ -18,5 +23,8 @@
     position: absolute;
     bottom: -1em;
     right: -1em;
+  }
+  body {
+    font-size: 18px;
   }
 }
