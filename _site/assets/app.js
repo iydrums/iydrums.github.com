@@ -139,7 +139,7 @@ cgf.sc = {
     this.songs = new cgf.Playlist({
       el: document.getElementById("soundcloud_player")
     })
-    SC.get("/users/15856496/tracks", function(res){
+    SC.get("/users/697067/tracks", function(res){
       res = res.reverse()
       i = l = res.length
       while(i--) {
@@ -156,7 +156,21 @@ cgf.sc = {
 }
 
 
+window.cgf = window.cgf || {}
+cgf.vm = {
+  init: function(){
+    $(document).on('click', 'a.vimeo_link', function(e){
+      e.preventDefault()
+      tpl = "<iframe frameborder='0' src='http://player.vimeo.com/video/" + this.getAttribute('data-id') + "?autoplay=1&title=0&portrait=0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>"
+      console.log(tpl)
+      this.parentNode.innerHTML = tpl
+    })
+  }
+}
+
+
 $(document).ready(function(){
   cgf.sc.init()
+  cgf.vm.init()
 })
 
