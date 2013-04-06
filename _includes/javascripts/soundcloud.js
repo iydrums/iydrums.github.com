@@ -5,6 +5,7 @@ cgf.Song = Backbone.Model.extend({
     "title": null,
     "id": null,
     "position": null,
+    "description": null,
     "sound": null
   }
 })
@@ -16,7 +17,10 @@ cgf.SongView = Backbone.View.extend({
     this.render()
   },
   render: function(){
-    this.$el.html(this.model.get('title'))
+    this.$el.html(
+      "<h3>" + this.model.get('title') + "</h3>" +
+      "<p>" + this.model.get('description') + "</p>"
+    )
   },
   events: {
     "click": "onclick"
@@ -100,6 +104,7 @@ cgf.sc = {
           title: song.title,
           position: l-i,
           id: song.id,
+          description: song.description.replace("\n","<br />")
         })
         self.songs.add(s)
       }

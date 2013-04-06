@@ -1,3 +1,6 @@
 .is_playing {
   background: white;
 }
+.is_playing h3 {
+  color: #222;
+}

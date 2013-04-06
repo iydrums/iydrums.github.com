@@ -22,6 +22,10 @@
 }
 .sc_song {
   cursor: pointer;
-  padding: .4em .1em;
+  padding: .5em;
+}
+.audioplayer ol {
+  margin-left: 1em;
+  padding-left: 0;
 }
 

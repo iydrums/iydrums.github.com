@@ -43,8 +43,7 @@ html {
   height: 100%;
   background-color: white;
 }
-body {
-  border: .5em solid white;
+body { border: .5em solid white;
   background-color: #ec8b3a;
 }
 
@@ -101,12 +100,19 @@ img { display: block; }
 }
 .sc_song {
   cursor: pointer;
-  padding: .4em .1em;
+  padding: .5em;
+}
+.audioplayer ol {
+  margin-left: 1em;
+  padding-left: 0;
 }
 
 
 .is_playing {
   background: white;
+}
+.is_playing h3 {
+  color: #222;
 }
 
 @media screen and (max-width: 645px) {
@@ -124,7 +130,7 @@ img { display: block; }
     font-size: 18px;
   }
   .sc_song {
-    padding: .7em .1em;
+    padding: .7em .3em;
   }
 }
 

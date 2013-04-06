@@ -3,8 +3,7 @@ html {
   height: 100%;
   background-color: white;
 }
-body {
-  border: .5em solid white;
+body { border: .5em solid white;
   background-color: #ec8b3a;
 }
 
